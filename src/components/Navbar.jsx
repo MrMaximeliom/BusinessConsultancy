@@ -12,7 +12,6 @@ const Navbar = () => {
   };
   // array containing navigation items
   const navItems = [
-    { id: 1, text: "Home", href: "/" },
     { id: 2, text: "Services", href: "/services" },
     { id: 3, text: "About US", href: "/about-us" },
     { id: 4, text: "Contact US", href: "contact-us" },
