@@ -22,7 +22,7 @@ const Navbar = () => {
   return (
     <div
       className="
-        bg-gray-950
+        bg-nile-light
         flex 
         justify-between
         items-center
@@ -30,14 +30,18 @@ const Navbar = () => {
         max-w-[12024px] 
         mx-1uto
         px-4
-        text-white
+      
         border-b-gray-300
+        pt-16
+        pb-16
         "
     >
       {/* logo */}
-      <h1 className="w-full text-3xl font-bold text-gray-50">
-        Business 4 Business
-      </h1>
+      <div className="lg:max-w-80 md:max-w-72 max-w-60">
+        <img src="/images/logo.png" alt="logo" />
+      </div>
+      {/* <h1>Business 4 Business</h1> */}
+
       {/* Desktop Navigation */}
       <ul className="hidden md:flex">
         {navItems.map((item) => (
@@ -61,8 +65,12 @@ const Navbar = () => {
         ))}
       </ul>
       {/* Mobile Navigation Icon */}
-      <div onClick={handleNavbar} className="block md:hidden">
-        {nav ? <AiOutlineClose size={20} /> : <AiOutlineMenu size={20} />}
+      <div onClick={handleNavbar} className="block md:hidden ">
+        {nav ? (
+          <AiOutlineClose size={20} color="black" />
+        ) : (
+          <AiOutlineMenu size={20} color="black" />
+        )}
       </div>
       {/* Mobile Navigation Menu */}
       <ul
