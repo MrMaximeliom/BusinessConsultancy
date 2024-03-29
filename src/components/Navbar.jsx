@@ -2,6 +2,15 @@ import React, { useState } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import { IoHome } from "react-icons/io5";
+import { FaRegStar } from "react-icons/fa6";
+import { MdBusinessCenter } from "react-icons/md";
+import { BsFillPeopleFill } from "react-icons/bs";
+import { MdOutlineAccountBalance } from "react-icons/md";
+import { FaFileInvoiceDollar } from "react-icons/fa";
+import { MdMiscellaneousServices } from "react-icons/md";
+import { FaNewspaper } from "react-icons/fa";
+import { BiSupport } from "react-icons/bi";
 const Navbar = () => {
   // manage navbar's visibility
   const [nav, setNav] = useState(false);
@@ -12,9 +21,49 @@ const Navbar = () => {
   };
   // array containing navigation items
   const navItems = [
-    { id: 2, text: "Services", href: "/services" },
-    { id: 3, text: "About US", href: "/about-us" },
-    { id: 4, text: "Contact US", href: "contact-us" },
+    { id: 2, text: "About US", href: "/about-us", icon: <FaRegStar /> },
+    {
+      id: 3,
+      text: "Business Setup",
+      href: "/business-setup",
+      icon: <MdBusinessCenter />,
+    },
+    {
+      id: 4,
+      text: "PRO SERVICE",
+      href: "/services",
+      icon: <BsFillPeopleFill />,
+    },
+    {
+      id: 5,
+      text: "Accounting",
+      href: "/accounting",
+      icon: <MdOutlineAccountBalance />,
+    },
+    {
+      id: 6,
+      text: "CORPORATE TAX UAE",
+      href: "/corporate-tax-uae",
+      icon: <FaFileInvoiceDollar />,
+    },
+    {
+      id: 7,
+      text: "OTHER SERVICES",
+      href: "/other-services",
+      icon: <MdMiscellaneousServices />,
+    },
+    {
+      id: 8,
+      text: "NEWS",
+      href: "/news",
+      icon: <FaNewspaper />,
+    },
+    {
+      id: 9,
+      text: "CONTACT",
+      href: "/contact",
+      icon: <BiSupport />,
+    },
   ];
   const border = `1px solid #1E67C6`;
   const boxShadow = `0px 4px 24px #1E67C6`;
@@ -47,7 +96,9 @@ const Navbar = () => {
         {navItems.map((item) => (
           <Link to={item.href} key={item.id}>
             <motion.li
-              className="p-4 rounded-xl m-3 cursor-pointer  whitespace-nowrap border-r-gray-300"
+              className="flex items-center gap-1
+               p-4 rounded-xl m-3 cursor-pointer   
+               whitespace-nowrap border-r-gray-300 text-nile-400 uppercase"
               style={{
                 border,
                 boxShadow,
@@ -59,6 +110,7 @@ const Navbar = () => {
                 scale: 0.985,
               }}
             >
+              <span>{item.icon}</span>
               {item.text}
             </motion.li>
           </Link>
@@ -76,19 +128,23 @@ const Navbar = () => {
       <ul
         className={
           nav
-            ? "absolute z-40 md:hidden left-0 top-0 w-[60%] h-full border-r border-r-gray-300 ease-in-out duration-500 mt-4 pt-14"
+            ? "absolute z-40 lg:hidden left-0 top-0 w-[60%] h-full border-r border-r-gray-300 ease-in-out duration-500 mt-4 pt-14"
             : "ease-in-out w-[60%] duration-500 fixed top-0 bottom-0 left-[-100%]"
         }
       >
         {/* Mobile Logo */}
         {/* Mobile Navigation Items */}
         {navItems.map((item) => (
-          <li
-            key={item.id}
-            className=" p-4 border-b border-b-[#1E67C6] rounded-xl duration-300 cursor-pointer"
-          >
-            <Link to={item.href}> {item.text}</Link>
-          </li>
+          <Link to={item.href} key={item.id}>
+            <li
+              key={item.id}
+              className="flex items-center justify-center gap-1 p-4 border-b border-b-[#1E67C6] rounded-xl duration-300 cursor-pointer hover:bg-nile-100 "
+            >
+              <span>{item.icon}</span>
+
+              {item.text}
+            </li>
+          </Link>
         ))}
       </ul>
     </div>
