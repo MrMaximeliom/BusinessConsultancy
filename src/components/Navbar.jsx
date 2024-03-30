@@ -92,13 +92,13 @@ const Navbar = () => {
       {/* <h1>Business 4 Business</h1> */}
 
       {/* Desktop Navigation */}
-      <ul className="hidden md:flex">
+      <ul className="hidden 2xl:flex">
         {navItems.map((item) => (
           <Link to={item.href} key={item.id}>
             <motion.li
               className="flex items-center gap-1
                p-4 rounded-xl m-3 cursor-pointer   
-               whitespace-nowrap border-r-gray-300 text-nile-400 uppercase"
+               whitespace-nowrap border-r-gray-300 text-nile-400 uppercase hover:bg-nile-100 focus:bg-nile-100"
               style={{
                 border,
                 boxShadow,
@@ -117,7 +117,7 @@ const Navbar = () => {
         ))}
       </ul>
       {/* Mobile Navigation Icon */}
-      <div onClick={handleNavbar} className="block md:hidden ">
+      <div onClick={handleNavbar} className="block 2xl:hidden ">
         {nav ? (
           <AiOutlineClose size={20} color="black" />
         ) : (
@@ -125,10 +125,11 @@ const Navbar = () => {
         )}
       </div>
       {/* Mobile Navigation Menu */}
+
       <ul
         className={
           nav
-            ? "absolute z-40 lg:hidden left-0 top-0 w-[60%] h-full border-r border-r-gray-300 ease-in-out duration-500 mt-4 pt-14"
+            ? "absolute z-40 lg:hidden left-0 top-0 w-[60%] h-auto border-r border-r-gray-300 ease-in-out duration-500 mt-32 rounded-xl  bg-nile-light"
             : "ease-in-out w-[60%] duration-500 fixed top-0 bottom-0 left-[-100%]"
         }
       >
@@ -138,10 +139,9 @@ const Navbar = () => {
           <Link to={item.href} key={item.id}>
             <li
               key={item.id}
-              className="flex items-center justify-center gap-1 p-4 border-b border-b-[#1E67C6] rounded-xl duration-300 cursor-pointer hover:bg-nile-100 "
+              className="flex items-center justify-start gap-1 p-4 border-b border-b-[#1E67C6] rounded-xl duration-300 cursor-pointer hover:bg-nile-100 focus:bg-nile-100 "
             >
               <span>{item.icon}</span>
-
               {item.text}
             </li>
           </Link>
