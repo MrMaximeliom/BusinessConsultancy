@@ -21,6 +21,11 @@ const ScrollSection = () => {
   const x = useTransform(scrollYProgress, [0, 1], ["1%", "-95%"]);
   return (
     <section ref={targetRef} className="relative h-[300vh] bg-nile-800">
+      <div className="sticky flex items-center justify-center text-center h-[10rem] mx-auto ">
+        <span className="text-transparent bg-gradient-to-br from-gray-400 to-white bg-clip-text lg:text-7xl md:text-5xl text-4xl  font-bold tracking-tight   ">
+          Our Services
+        </span>
+      </div>
       <div className="sticky top-0 flex h-1/4 items-center overflow-hidden">
         <motion.div style={{ x }} className="flex gap-4">
           {cards.map((card) => {

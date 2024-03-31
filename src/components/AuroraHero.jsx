@@ -27,14 +27,14 @@ const AuroraHero = () => {
   return (
     <motion.section className="relative grid min-h-screen place-content-center overflow-hidden bg-nile-700 px-4 py-24 text-gray-200">
       <div className="relative z-10 flex flex-col items-center">
-        <h1 className="max-w-3xl bg-gradient-to-br from-gray-400 to-white bg-clip-text text-center text-3xl font-medium leading-tight text-transparent sm:text-5xl sm:leading-tight md:text-7xl md:leading-tight">
-          Decrease your SaaS Churn by Over 90%
+        <h1 className="max-w-3xl bg-gradient-to-br from-gray-400 to-white bg-clip-text text-center text-3xl font-medium leading-tight text-transparent sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight">
+          START YOUR BUSINESS IN DUBAI AND UAE WITH B4B CONSULTANCY
         </h1>
-        <p className="my-6 max-w-xl text-center text-base leading-relaxed md:text-lg md:leading-relaxed text-gray-200">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima
-          aliquam voluptates eos perspiciatis ipsam nobis voluptatum nesciunt
-          impedit id cumque reprehenderit in ad aperiam saepe nostrum ea sunt,
-          quod vero.
+        <p className="my-6 max-w-xl text-center text-base leading-relaxed md:text-2xl md:leading-relaxed text-gray-200">
+          Business 4 Business Consultancy provides a wide range of business
+          setup services in Dubai and UAE for start-ups. We offer the best and
+          most economical business setup and company registration services in
+          Dubai.
         </p>
         <motion.button
           style={{
