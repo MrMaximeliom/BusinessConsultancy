@@ -25,7 +25,7 @@ const AuroraHero = () => {
   const border = useMotionTemplate`1px solid ${color}`;
   const boxShadow = useMotionTemplate`0px 4px 24px ${color}`;
   return (
-    <motion.section className="relative grid min-h-screen place-content-center overflow-hidden bg-nile-700 px-4 py-24 text-gray-200">
+    <motion.div className="relative grid min-h-screen place-content-center overflow-hidden bg-nile-700 px-4 py-24 text-gray-200">
       <div className="relative z-10 flex flex-col items-center">
         <h1 className="max-w-3xl bg-gradient-to-br from-gray-400 to-white bg-clip-text text-center text-3xl font-medium leading-tight text-transparent sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight">
           START YOUR BUSINESS IN DUBAI AND UAE WITH B4B CONSULTANCY
@@ -58,7 +58,7 @@ const AuroraHero = () => {
           <Stars radius={50} count={2500} factor={4} fade speed={2}></Stars>
         </Canvas>
       </div>
-    </motion.section>
+    </motion.div>
   );
 };
 
